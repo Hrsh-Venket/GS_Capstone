@@ -6,34 +6,39 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 
 
 ## Structure
-- IO with PLY file: plyfile.py
-    - Can use existing code here
-    - Validate input and have verbose errors (need to add)
-- UI elements with Serpens blender addon: __init.py__
-- Handles Gaussians: __init.py__
-    - Edit (manipulate gaussians)
-    - Render (some GPU code here)
-    - Mesh 2 3DGS (need to understand which algorithms they use)
-- Modifier operations: __init.py__
-    - Crop Box, Colour Edit, Keyframe-based animation operations, etc
+
+- IO with ply file:
+    - Uses existing blender IO operations to load gaussian splat ply as a mesh ply with special attributes
+    - Uses special attributes to convert this mesh to a gaussian splat
+    - [ ] Add logging to this convertion and IO to check if a user does not upload a valid ply file
+- Handles Guassians
+    - Edit
+    - Render
+    - Interestingly uses dbscan to auto crop objects. Can use this to more easily paint gaussians onto a rig
+- Modifier operations
+    - Crop Box
+    - Colour Edit
+    - Keyframe-based animation operations
 
 ## TODO
 - [ ] Restructure code, understand it in detail and mark TODOs
+ - [ ] Rewrite math operations, try to vectorise or similar
+ - [ ] Add proper logging (only print debugging exists across this repository)
 - [ ] Add operations for rigging (discuss operations)
     - [ ] Paint gaussians onto the bones
-    - [ ] link gaussians onto the bones
-    - [ ] 
+    - [ ] Link gaussians onto the bones
 - [ ] Test operations
 - [ ] Create basic GUI for operations
 - [ ] Improve GUI based on feedback
 - [ ] Structure IO for rigged (FBX? GLTF?)
+- [ ] Look into optimisations given freethreading in python 3.14
 
 # Checkpoints to build addon
 
-- March 13: Restructure code, understand it in detail and mark TODOs
-- March 20: 
-- March 27: Write basic operations guiv
-- April 10:
+- March 13: 
+- March 20: Restructure code, understand it in detail and mark TODOs
+- March 27: 
+- April 10: Write basic operations and add a gui
 - April 17:
 - April 24:
 - May 1:
