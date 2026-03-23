@@ -18,15 +18,31 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - Modifier operations
     - Crop Box
     - Colour Edit
-    - Keyframe-based animation operations
+    - Keyframe-based animation operationsA
+
+
+## Idea for rigging implementation (cpu prototype)
+- Gaussian is loaded as a source mesh with special properties
+    - Each gaussian is a vertex with attributes of a gaussian
+    - Therefore, each vertex can be rigged onto the bones natively in blender
+- We need to adjust the viewport renderer from blender to translate and rotate gaussians rigged to specific bones
+    - Each gaussian (vertex) can be connected to n bones
+    - Get R and t from bpy.PoseBone.matrix which returns a 4*4 array (Source: https://blenderartists.org/t/whats-the-difference-of-pose-bones-matrix-basis-matrix-matrix-channel/529837/2)
+    - Translation can be a weighted average of the position of the gaussian (based on the pull of all bones)
+    - Rotation can be taken as the weighted average of the n quaternions
+        - weighted average method: https://stackoverflow.com/questions/12374087/average-of-multiple-quaternions
+
+
+- Rotation is less important. First iteration only translation or use easy rotation interpretation
+- 
 
 ## TODO
-- [ ] Restructure code, understand it in detail and mark TODOs
+- [x] Restructure code, understand it in detail and mark TODOs
+- [ ] Add operations for rigging (discuss operations)
+    - [ ] Translation of gaussians based on weighted average of rigged bone positions
+    - [ ] 
  - [ ] Rewrite math operations, try to vectorise or similar
  - [ ] Add proper logging (only print debugging exists across this repository)
-- [ ] Add operations for rigging (discuss operations)
-    - [ ] Paint gaussians onto the bones
-    - [ ] Link gaussians onto the bones
 - [ ] Test operations
 - [ ] Create basic GUI for operations
 - [ ] Improve GUI based on feedback
