@@ -36,11 +36,31 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - Rotation is less important. First iteration only translation or use easy rotation interpretation
 - 
 
+- Report:
+    - Goals
+    - Progress on those goals
+    - Future goals
+
+
 ## TODO
 - [x] Restructure code, understand it in detail and mark TODOs
-- [ ] Add operations for rigging (discuss operations)
-    - [ ] Translation of gaussians based on weighted average of rigged bone positions
-    - [ ] 
+- [x] Add operations for rigging (discuss operations)
+    - [x] Translation of gaussians based on weighted average of rigged bone positions
+    - [x] Rotation of gaussians based on weighted average of rigged bone positions
+    - [x] Translation of gaussians based on proxy mesh
+    - [x] Rotation of gaussians based on proxy mesh
+    - [ ] Look at affine transformation to handle scaling
+        - [ ] Look into other scaling methods:
+            - [ ] Scaling methods
+    - [ ] Look into scaling of gaussians as mesh triangles scalea
+    - [ ] Check out weirdness of splat rendering in viewport(check order of rendering)
+        - [ ] Ordering not updating as you rotate the GS
+        - [ ] Methods:
+            - [ ] Sort every frame (naiive)
+            - [ ] Preordered sorting (can help optimise)
+            - [ ] Turn off buffering (no transprency)
+            - [ ] 
+
  - [ ] Rewrite math operations, try to vectorise or similar
  - [ ] Add proper logging (only print debugging exists across this repository)
 - [ ] Test operations
@@ -60,6 +80,6 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - May 1:
 - May 8:
 - May 15:
-- May 22:
+- May 27 9:30 AM
 - May 29: Interim Report Submission
 
