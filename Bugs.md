@@ -11,6 +11,7 @@ When I loaded lego_palace.ply -- nothing else
 - Understand what this is
 ```
 
+```
 Exception ignored in: <function ImagePreviewCollection.__del__ at 0x7f1fbf9f4a40>
 Traceback (most recent call last):
   File "/home/hrsh/Software/blender-5.0.1-linux-x64/5.0/scripts/modules/bpy/utils/previews.py", line 63, in __del__
@@ -24,4 +25,10 @@ ResourceWarning: <ImagePreviewCollection id=0x7f1fb83ea8d0[8], <super: <class 'I
 /home/hrsh/.config/blender/5.0/extensions/user_default/dgs_render_by_kiri_engine/src/sna_viewport_render.py:248: RuntimeWarning: invalid value encountered in cast
   depths_uint32 = depths_scaled.astype(np.uint32)
 
+```
+/Users/hrsh/Library/Application Support/Blender/4.5/extensions/user_default/dgs_render_by_kiri_engine/src/sna_viewport_render.py:233: RuntimeWarning: divide by zero encountered in matmul
+  camera_positions = positions_homogeneous @ combined_transform.T
+/Users/hrsh/Library/Application Support/Blender/4.5/extensions/user_default/dgs_render_by_kiri_engine/src/sna_viewport_render.py:233: RuntimeWarning: overflow encountered in matmul
+
+# Issue likely causing the weirdness in viewport rendering
 ```

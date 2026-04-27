@@ -44,23 +44,30 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 
 ## TODO
 - [x] Restructure code, understand it in detail and mark TODOs
-- [x] Add operations for rigging (discuss operations)
+- [X] Add operations for rigging (discuss operations)
     - [x] Translation of gaussians based on weighted average of rigged bone positions
     - [x] Rotation of gaussians based on weighted average of rigged bone positions
     - [x] Translation of gaussians based on proxy mesh
     - [x] Rotation of gaussians based on proxy mesh
-    - [ ] Look at affine transformation to handle scaling
-        - [ ] Look into other scaling methods:
-            - [ ] Scaling methods
-    - [ ] Look into scaling of gaussians as mesh triangles scalea
-    - [ ] Check out weirdness of splat rendering in viewport(check order of rendering)
-        - [ ] Ordering not updating as you rotate the GS
-        - [ ] Methods:
-            - [ ] Sort every frame (naiive)
-            - [ ] Preordered sorting (can help optimise)
-            - [ ] Turn off buffering (no transprency)
-            - [ ] 
-
+    - [X] Look at affine transformation to handle scaling
+        - [X] Look into other scaling methods:
+            - [X] Scaling methods
+    - [x] Look into scaling of gaussians as mesh triangles scale
+    - [X] Check out weirdness of splat rendering in viewport(check order of rendering)
+        - [X] Ordering not updating as you rotate the GS
+        - [X] Methods:
+            - [X] ~Sort every frame (naiive)~
+            - [X] ~Preordered sorting (can help optimise)~
+            - [X] ~Turn off buffering (no transprency)~
+            - [X] Ensure that order updates are being called correctly
+            - [X] Ensure rotation (not just translation) is recorded as translation of viewport camera (record updates with RegionView3D)
+    - [ ] Allow individual gaussians to be bound to different triangles
+    - [ ] Penalty for mapping gaussians to parts of mesh topology that are far apart
+    - [ ] Priority queue and label propogation
+    - [ ] Look for areas of coverange
+    - [ ] Look into splitting of gaussians
+    - [ ] Based on the given rigging (lazy decision on split)
+    - [ ] Remeshing
  - [ ] Rewrite math operations, try to vectorise or similar
  - [ ] Add proper logging (only print debugging exists across this repository)
 - [ ] Test operations
@@ -69,6 +76,8 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - [ ] Structure IO for rigged (FBX? GLTF?)
 - [ ] Look into optimisations given freethreading in python 3.14
 
+
+
 # Checkpoints to build addon
 
 - March 13: 
@@ -76,10 +85,9 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - March 27: 
 - April 10: Write basic operations and add a gui
 - April 17:
-- April 24:
-- May 1:
+- April 27: Basic rigging pipeline fully working
 - May 8:
 - May 15:
-- May 27 9:30 AM
+- May 27
 - May 29: Interim Report Submission
 
