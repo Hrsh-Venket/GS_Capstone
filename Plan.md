@@ -44,7 +44,7 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 
 ## TODO
 - [x] Restructure code, understand it in detail and mark TODOs
-- [X] Add operations for rigging (discuss operations)
+- [o] Add operations for rigging (discuss operations)
     - [x] Translation of gaussians based on weighted average of rigged bone positions
     - [x] Rotation of gaussians based on weighted average of rigged bone positions
     - [x] Translation of gaussians based on proxy mesh
@@ -61,13 +61,13 @@ Aim of the software: Complement existing workflows for artists who do rigging on
             - [X] ~Turn off buffering (no transprency)~
             - [X] Ensure that order updates are being called correctly
             - [X] Ensure rotation (not just translation) is recorded as translation of viewport camera (record updates with RegionView3D)
-    - [ ] Allow individual gaussians to be bound to different triangles
-    - [ ] Penalty for mapping gaussians to parts of mesh topology that are far apart
-    - [ ] Priority queue and label propogation
-    - [ ] Look for areas of coverange
-    - [ ] Look into splitting of gaussians
-    - [ ] Based on the given rigging (lazy decision on split)
-    - [ ] Remeshing
+    - [X] Penalty for mapping gaussians to parts of mesh topology that are far apart
+    - [X] Priority queue and label propogation
+    - [X] Look for areas of coverange
+ - [X] Look into splitting of gaussians
+    - [X] Based on the given rigging (lazy decision on split)
+    - [X] Remeshing
+    - [X] Allow individual gaussians to be bound to different triangles
  - [ ] Rewrite math operations, try to vectorise or similar
  - [ ] Add proper logging (only print debugging exists across this repository)
 - [ ] Test operations
@@ -87,7 +87,7 @@ Aim of the software: Complement existing workflows for artists who do rigging on
 - April 17:
 - April 27: Basic rigging pipeline fully working
 - May 8:
-- May 15:
-- May 27
+- May 15: Better binding of gaussians, creation of new gaussians for better resolution
+- May 27: Clean up everything in the plugin
 - May 29: Interim Report Submission
 
