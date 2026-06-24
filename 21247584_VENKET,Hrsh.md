@@ -435,4 +435,3 @@ Overall workflow:
     - [ ] Relighting can be an orthogonal problem
 
 #### 3. Meeting adjournment and next meeting
-Meeting Adjourned at 10:15 pm
